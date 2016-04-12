@@ -1,7 +1,7 @@
 
 <!doctype html>
 
-<html lang="en" ng-app>
+<html lang="en" ng-app='myApp'>
   
   <head>
     
@@ -9,13 +9,17 @@
     
     <link href="styles.css" rel="stylesheet" type="text/css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
-    
+    <script src="script.js"></script>
+
   </head>
   
   
   <body ng-init="numbers=[1,2,3,4]">
     
     <p>{{numbers[0]+numbers[3]}}</p>
+    <br>
+    <br>
+    <hr>
     
     <div data-ng-app="" data-ng-init="quantity=1;price=5">
 
@@ -27,6 +31,9 @@ Price: <input type="number" ng-model="price">
 <p><b>Total in dollar:</b> {{quantity * price}}</p>
 
 </div>
+<br>
+<br>
+<hr>
     
     
      <div ng-app="" ng-init="names=[
@@ -39,18 +46,36 @@ Price: <input type="number" ng-model="price">
             {{ x.name + ', ' + x.country }}
           </li>
               </ul>
+              <br>
+              <br>
+              <hr>
               
       
        <p>HELLO WORLD</p>
        
        <h1>WELCOME</h1>
-       
-
+       <br>
+       <br>
+       <hr>
+     
+      
 <p>Name: <input type="text" ng-model="name" placeholder="enter your name"/></p>
 
-<p>Your name is: {{ name }}</p> 
+<p>Your name is: {{ name }}</p>
+<br>
+<br>
+<hr>
 
      </div>
+     
+     <div ng-app="myApp" ng-controller="myCtrl">
+      Name: <input ng-model="name">
+      
+      <h3>You entered: {{name}}</h3>
+     </div>
+     
+<p>Change the name inside the input field, and you will see the name in the header changes accordingly.</p>
+
      
   </body>
   
