@@ -1,19 +1,36 @@
 
 <!doctype html>
+
 <html lang="en" ng-app>
+  
   <head>
+    
     <title>My Angular App</title>
+    
     <link href="styles.css" rel="stylesheet" type="text/css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+    
   </head>
-  <body>
+  
+  
+  <body ng-init="numbers=[1,2,3,4]">
+    
+    <p>{{numbers[0]+numbers[3]}}</p>
+    
+    
      <div ng-app="">
+       
        <p>HELLO WORLD</p>
+       
        <h1>WELCOME</h1>
+       
 
 <p>Name: <input type="text" ng-model="name" placeholder="enter your name"/></p>
-<p>You wrote: {{ name }}</p> 
 
-</div>
+<p>Your name is: {{ name }}</p> 
+
+     </div>
+     
   </body>
+  
 </html>
