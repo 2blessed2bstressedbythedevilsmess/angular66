@@ -86,8 +86,33 @@ Price: <input type="number" ng-model="price">
 </form>
 
 <p>Enter your e-mail address in the input field. AngularJS will display an errormessage if the address is not an e-mail.</p>
+<br>
+<br>
+<hr>
+<div ng-app="myApp" ng-controller="names1Ctrl">
 
+<p>Looping with objects:</p>
+<ul>
+  <li ng-repeat="x in names | orderBy:'country'">
+    {{ x.name + ', ' + x.country }}
+  </li>
+</ul>
+<br>
+<br>
+<hr>
 
+</div>
+<div ng-app="myApp" ng-controller="namesCtrl">
+
+<ul>
+  <li ng-repeat="x in names | filter : 'i'">
+    {{ x }}
+  </li>
+</ul>
+
+</div>
+
+<p>This example displays only the names containing the letter "i".</p>
      
   </body>
   
